@@ -1,0 +1,36 @@
+/* css/admin.css - Tata letak admin: sidebar kiri + konten kanan */
+body.admin{display:grid;grid-template-columns:250px 1fr;min-height:100vh;background:var(--cream)}
+.sidebar{background:var(--black);color:#d9cdbd;padding:22px 14px;display:flex;flex-direction:column;gap:4px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.side-brand{font:700 1.6rem 'Cormorant Garamond',serif;color:var(--cream);padding:0 10px 18px}.side-brand em{font-style:normal;color:var(--brown)}
+.sidebar a,.sidebar button{display:block;width:100%;text-align:left;background:none;border:0;color:#d9cdbd;font:500 .98rem 'Jost',sans-serif;padding:10px 12px;border-radius:8px;text-decoration:none;cursor:pointer;transition:.2s}
+.sidebar a:hover,.sidebar button:hover{background:rgba(255,255,255,.08)}
+.sidebar a.on{background:var(--brown);color:var(--white)}
+.side-foot{margin-top:auto;border-top:1px solid rgba(255,255,255,.15);padding-top:12px}
+.ad-top{display:flex;align-items:center;gap:14px;background:var(--white);border-bottom:1px solid var(--line);padding:14px 28px}
+.ad-top h1{font-size:1.9rem;flex:1}.ad-top span{color:#6b5d54;font-size:.92rem}
+#sideToggle{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
+.ad-content{padding:26px 28px 60px;min-width:0}
+.ad-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.chart svg{width:100%;height:auto}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-bottom:16px}
+.tools select{width:auto}.tools .grow{flex:1}
+.table select{width:auto;padding:6px 10px;font-size:.9rem}
+.pk{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:var(--white)}
+.pk .row2{margin-bottom:8px}.pk .act{display:flex;gap:8px;margin-top:8px}
+.pk label{margin:4px 0}
+@media(max-width:900px){
+ body.admin{grid-template-columns:1fr}
+ .sidebar{position:fixed;z-index:80;width:250px;transform:translateX(-100%);transition:.25s}
+ .side-open .sidebar{transform:none}
+ #sideToggle{display:block}.ad-stats,.two{grid-template-columns:1fr}.ad-content{padding:20px 14px 50px}.ad-top{padding:12px 14px}
+}
+
+/* ===== Tahap 6: laporan ===== */
+.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px}
+.filter-grid select,.filter-grid input{width:100%}
+.rep-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.rep-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
+.rep-note{color:#6b5d54;font-size:.92rem;margin-bottom:10px}
+.table tfoot td{background:var(--cream)}
+@media(max-width:900px){.rep-stats{grid-template-columns:repeat(2,1fr)}}

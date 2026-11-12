@@ -1,0 +1,46 @@
+/* css/user.css - Gaya halaman pelanggan (folder user/) */
+.subnav{background:var(--white);border-bottom:1px solid var(--line)}
+.subnav .container{display:flex;gap:6px;overflow-x:auto}
+.subnav a{padding:14px 18px;text-decoration:none;color:var(--black);font-weight:500;border-bottom:3px solid transparent;white-space:nowrap}
+.subnav a:hover,.subnav a.on{border-color:var(--brown);color:var(--dark)}
+.user-wrap{padding:40px 0 70px}
+.greet{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.greet p{color:#6b5d54}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.stat strong{display:block;font:700 2.4rem 'Cormorant Garamond',serif;color:var(--dark);line-height:1}
+.stat span{color:#6b5d54}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);margin-bottom:24px}
+.panel h2{font-size:1.7rem;margin-bottom:14px}
+.table-wrap{overflow-x:auto}
+table.table{width:100%;border-collapse:collapse;font-size:.95rem}
+.table th{text-align:left;background:var(--cream);padding:10px 12px;font-weight:600;white-space:nowrap}
+.table td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+.table .act{display:flex;gap:6px;flex-wrap:wrap}
+.empty{padding:26px;text-align:center;color:#6b5d54}
+.badge{display:inline-block;padding:3px 12px;border-radius:999px;font-size:.82rem;font-weight:500;white-space:nowrap;background:#eee}
+.b-menunggu,.b-pending,.b-belum{background:#fbf0d8;color:#7a5a12}
+.b-dikonfirmasi,.b-dikerjakan{background:#e1ecf7;color:#1f4e79}
+.b-selesai,.b-berhasil{background:#e6f2e4;color:#2f5d2a}
+.b-dibatalkan,.b-gagal,.b-kedaluwarsa{background:#f8e3e0;color:#8a2c22}
+.book-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.summary{position:sticky;top:90px}
+.summary img{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+.summary ul{list-style:none;margin:10px 0}.summary li{padding:3px 0 3px 20px;position:relative;font-size:.94rem}
+.summary li::before{content:"\2713";position:absolute;left:0;color:var(--brown);font-weight:700}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--brown);padding-top:12px;margin-top:12px}
+.total strong{font:700 1.8rem 'Cormorant Garamond',serif;color:var(--dark)}
+.user-wrap form .btn{margin-top:20px}
+.detail dl{display:grid;grid-template-columns:150px 1fr;gap:8px 14px}.detail dt{color:#6b5d54}
+@media(max-width:900px){.book-grid{grid-template-columns:1fr}.summary{position:static}.stats{grid-template-columns:1fr}}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+
+/* ===== Tahap 4: pembayaran ===== */
+.sim-banner{background:#fbf0d8;color:#7a5a12;border-radius:8px;padding:10px 14px;font-size:.92rem;margin-bottom:18px}
+.pay-list{display:grid;grid-template-columns:170px 1fr;gap:8px 14px}.pay-list dt{color:#6b5d54}
+.method{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0 0 8px;cursor:pointer;font-weight:500}
+.method input{width:auto}.method:has(input:checked){border-color:var(--brown);background:var(--cream)}
+.sim-opt{display:grid;gap:10px;margin-top:16px}
+.sim-opt .btn{width:100%}
+.btn-ok{background:#2f7a2a;border-color:#2f7a2a}.btn-warn{background:#b8860b;border-color:#b8860b}.btn-bad{background:#a33a2f;border-color:#a33a2f}.btn-mute{background:#6b5d54;border-color:#6b5d54}

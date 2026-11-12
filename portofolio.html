@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/user.css">
+<link rel="stylesheet" href="../css/admin.css">
+<title>Portofolio | Admin LensaKita</title>
+</head>
+<body class="admin" data-root="../">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="ad-main">
+<header class="ad-top"><button id="sideToggle" aria-label="Menu">&#9776;</button><h1>Portofolio</h1><span id="adUser"></span></header>
+<main class="ad-content">
+  <form class="panel" id="porForm" novalidate>
+    <h2>Tambah foto atau video</h2>
+    <div class="alert alert-error" id="pMsg" role="alert"></div>
+    <div class="row2"><div><label for="pType">Jenis</label><select id="pType"><option value="foto">Foto</option><option value="video">Video</option></select></div>
+    <div><label for="pCat">Kategori</label><select id="pCat"></select></div></div>
+    <label for="pTitle">Judul</label><input id="pTitle" placeholder="Contoh: Wisuda UI 2026">
+    <div id="pFileBox"><label for="pFile">Upload foto</label><input type="file" id="pFile" accept="image/*"></div>
+    <label for="pUrl" id="pUrlLabel">Alamat</label><input id="pUrl" placeholder="https://...">
+    <small id="pHelp" style="color:#6b5d54"></small><br>
+    <button class="btn" type="submit" style="margin-top:16px">Tambahkan</button>
+  </form>
+  <div class="panel"><h2>Daftar item</h2><div class="table-wrap"><table class="table">
+    <thead><tr><th>Judul</th><th>Jenis</th><th>Kategori</th><th>Sumber</th><th>Aksi</th></tr></thead><tbody id="porBody"></tbody></table></div>
+    <p style="margin-top:12px;color:#6b5d54;font-size:.92rem">Foto dari Layanan &amp; Paket tetap tampil otomatis di halaman Portfolio.</p></div>
+</main>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Tutup">&times;</button><div id="modalBody"></div></div></div>
+<script src="../js/storage.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

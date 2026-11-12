@@ -1,0 +1,41 @@
+/* css/print.css - Tampilan struk (layar & cetak) */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:22px}
+.toolbar select{width:auto}
+.receipt{background:#fff;color:#222;max-width:560px;margin:0 auto;padding:34px;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);position:relative}
+.r-head{text-align:center;border-bottom:2px dashed #cdbfa9;padding-bottom:16px;margin-bottom:16px}
+.r-logo{width:48px;height:48px;margin:0 auto 6px;border-radius:50%;background:#222;color:#F5EFE6;display:grid;place-items:center;font:700 1.6rem 'Cormorant Garamond',serif}
+.r-head h2{font-size:1.7rem}.r-head p{font-size:.88rem;color:#6b5d54}
+.r-stamp{text-align:center;font:700 1.5rem 'Cormorant Garamond',serif;letter-spacing:.12em;border:3px solid;border-radius:8px;width:max-content;margin:0 auto 16px;padding:2px 22px;transform:rotate(-3deg)}
+.r-stamp.ok{color:#2f7a2a}.r-stamp.no{color:#a33a2f}
+.r-list{display:grid;grid-template-columns:44% 1fr;gap:7px 10px;font-size:.93rem}
+.r-list dt{color:#6b5d54}.r-list dd{font-weight:500;word-break:break-word}
+.r-total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px dashed #cdbfa9;margin-top:16px;padding-top:12px}
+.r-total strong{font:700 1.7rem 'Cormorant Garamond',serif}
+.r-note{margin-top:14px;font-size:.92rem;text-align:center}
+.r-demo{margin-top:8px;font-size:.78rem;text-align:center;color:#8a7d72}
+.receipt.thermal{max-width:302px;padding:14px;font-size:12px;border-radius:0}
+.receipt.thermal .r-list{grid-template-columns:1fr;gap:0}.receipt.thermal .r-list dd{margin-bottom:6px}
+.receipt.thermal .r-head h2{font-size:1.3rem}.receipt.thermal .r-stamp{font-size:1.1rem}
+@media print{
+  .site-header,.site-footer,.toolbar,.toast,.no-print{display:none!important}
+  body{background:#fff}.user-wrap{padding:0!important;width:100%!important;margin:0!important}
+  .receipt{box-shadow:none;border:0;border-radius:0;margin:0 auto;max-width:none}
+  .receipt:not(.thermal){max-width:560px}
+  .receipt.thermal{max-width:72mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* ===== Cetak laporan keuangan (admin) ===== */
+.print-only{display:none}
+@media print{
+  body.admin{display:block;background:#fff}
+  .sidebar,.ad-top,.modal{display:none!important}
+  .print-only{display:block;text-align:center;margin-bottom:12px}
+  .print-only h2{font-size:1.6rem}.print-only h3{font-size:1.2rem}.print-only p{font-size:.85rem}
+  .ad-content{padding:0}
+  .panel,.stat{box-shadow:none;border:0;padding:0}
+  .rep-stats{grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+  .rep-stats .stat{border:1px solid #bbb;padding:6px 10px}.rep-stats .stat strong{font-size:1.3rem!important}
+  .table{font-size:11px}.table th,.table td{border:1px solid #bbb;padding:4px 6px}
+  .table tr{break-inside:avoid}
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/user.css">
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="../css/print.css">
+<title>Laporan Keuangan | Admin LensaKita</title>
+</head>
+<body class="admin" data-root="../">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="ad-main">
+<header class="ad-top"><button id="sideToggle" aria-label="Menu">&#9776;</button><h1>Laporan Keuangan</h1><span id="adUser"></span></header>
+<main class="ad-content">
+  <form class="panel no-print" id="filterForm">
+    <div class="filter-grid">
+      <div><label for="fFrom">Tanggal awal</label><input type="date" id="fFrom"></div>
+      <div><label for="fTo">Tanggal akhir</label><input type="date" id="fTo"></div>
+      <div><label for="fMonth">Bulan</label><select id="fMonth"></select></div>
+      <div><label for="fYear">Tahun</label><select id="fYear"></select></div>
+      <div><label for="fStat">Status pembayaran</label><select id="fStat"></select></div>
+      <div><label for="fSvc">Jenis layanan</label><select id="fSvc"></select></div>
+    </div>
+    <div class="rep-actions">
+      <button class="btn btn-sm" type="submit">Filter</button>
+      <button class="btn btn-sm btn-ghost" type="button" id="btnResetFilter">Reset Filter</button>
+      <button class="btn btn-sm btn-ghost" type="button" id="btnPrintRep">Cetak Laporan</button>
+      <button class="btn btn-sm btn-ghost" type="button" id="btnPdfRep">Download PDF</button>
+    </div>
+  </form>
+  <div class="print-only" id="printHead"></div>
+  <div class="rep-stats" id="repStats"></div>
+  <p class="rep-note" id="repNote"></p>
+  <div class="panel"><div class="table-wrap"><table class="table">
+    <thead><tr><th>No.</th><th>Tanggal</th><th>Nomor transaksi</th><th>Nama pelanggan</th><th>Jenis layanan</th><th>Total pembayaran</th><th>Metode pembayaran</th><th>Status pembayaran</th></tr></thead>
+    <tbody id="repBody"></tbody><tfoot id="repFoot"></tfoot></table></div></div>
+</main>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Tutup">&times;</button><div id="modalBody"></div></div></div>
+<script src="../js/storage.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/laporan.js"></script>
+</body>
+</html>

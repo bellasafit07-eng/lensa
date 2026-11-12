@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Contact | LensaKita Studio</title>
+</head>
+<body data-root="">
+<header class="site-header" id="site-header"></header>
+<main>
+<section class="page-hero"><div class="container"><h1>Hubungi kami</h1><p>Punya pertanyaan sebelum memesan? Kirim pesan atau datang ke studio.</p></div></section>
+
+<section class="section white"><div class="container contact-grid">
+  <div>
+    <div class="info-card"><h3>Alamat studio</h3><p>Jl. Cahaya No. 12, Jakarta Selatan</p></div>
+    <div class="info-card"><h3>Kontak</h3><p>WhatsApp 0812-0000-1234<br>halo@lensakita.test</p></div>
+    <div class="info-card"><h3>Jam buka</h3><p>Senin-Sabtu, 09.00-18.00 WIB<br>Instagram @lensakita.studio</p></div>
+  </div>
+  <form class="form-box" id="contactForm" novalidate>
+    <h2>Kirim pesan</h2>
+    <div class="alert" id="msg" role="alert"></div>
+    <label for="cname">Nama</label><input id="cname" required>
+    <label for="cemail">Email</label><input type="email" id="cemail" required>
+    <label for="cmessage">Pesan</label><textarea id="cmessage" rows="5" required></textarea>
+    <button class="btn" type="submit">Kirim Pesan</button>
+  </form>
+</div></section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

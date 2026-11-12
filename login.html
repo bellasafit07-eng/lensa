@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Login | LensaKita Studio</title>
+</head>
+<body data-root="">
+<header class="site-header" id="site-header"></header>
+<main class="container">
+  <form class="form-box" id="loginForm" novalidate>
+    <h2>Masuk</h2>
+    <p class="sub">Login sebagai admin atau pelanggan.</p>
+    <div class="alert alert-error" id="msg" role="alert"></div>
+    <label for="username">Username</label>
+    <input id="username" autocomplete="username" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" autocomplete="current-password" required>
+    <button class="btn" type="submit">Login</button>
+    <p class="muted">Belum punya akun? <a href="register.html">Daftar</a></p>
+    <div class="demo-box"><strong>Akun demo</strong><br>Admin: admin / admin123<br>Pelanggan: pelanggan / user123</div>
+  </form>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Jika sudah login, langsung arahkan ke dashboard sesuai peran
+(function () { const u = Auth.current(); if (u) location.replace(u.role === 'admin' ? 'admin/dashboard.html' : 'user/dashboard.html'); })();
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const r = Auth.login(document.getElementById('username').value, document.getElementById('password').value);
+  const msg = document.getElementById('msg');
+  if (!r.ok) { msg.textContent = r.msg; msg.classList.add('show'); return; }
+  location.href = r.role === 'admin' ? 'admin/dashboard.html' : 'user/dashboard.html';
+});
+</script>
+</body>
+</html>

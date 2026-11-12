@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/user.css">
+<link rel="stylesheet" href="../css/print.css">
+<title>Struk Pembayaran | LensaKita Studio</title>
+</head>
+<body data-root="../">
+<header class="site-header" id="site-header"></header>
+<main class="container user-wrap">
+<div class="toolbar" id="toolbar">
+  <a class="btn btn-sm btn-ghost" id="btnBack" href="riwayat.html">Kembali</a>
+  <select id="fmt" aria-label="Ukuran kertas"><option value="a4">Kertas A4</option><option value="thermal">Thermal 80 mm</option></select>
+  <button class="btn btn-sm" id="btnPrint">Cetak Struk</button>
+  <button class="btn btn-sm btn-ghost" id="btnPdf">Download PDF</button>
+</div>
+<article class="receipt" id="receipt"></article>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="../js/storage.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/payment.js"></script>
+</body>
+</html>

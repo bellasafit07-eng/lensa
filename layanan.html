@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/user.css">
+<link rel="stylesheet" href="../css/admin.css">
+<title>Layanan & Paket | Admin LensaKita</title>
+</head>
+<body class="admin" data-root="../">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="ad-main">
+<header class="ad-top"><button id="sideToggle" aria-label="Menu">&#9776;</button><h1>Layanan & Paket</h1><span id="adUser"></span></header>
+<main class="ad-content">
+
+<div class="tools"><button class="btn" id="btnAddSvc">Tambah Layanan</button></div>
+<div class="panel"><div class="table-wrap"><table class="table"><thead><tr><th>Kategori</th><th>Layanan</th><th>Harga dasar</th><th>Paket</th><th>Aksi</th></tr></thead><tbody id="svcBody"></tbody></table></div></div>
+</main>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" aria-label="Tutup">&times;</button><div id="modalBody"></div></div></div>
+<script src="../js/storage.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

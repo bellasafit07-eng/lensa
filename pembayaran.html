@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/user.css">
+<title>Pembayaran | LensaKita Studio</title>
+</head>
+<body data-root="../">
+<header class="site-header" id="site-header"></header>
+<main class="container user-wrap">
+<h1 style="font-size:2.4rem;margin-bottom:20px">Pembayaran</h1>
+<div id="payBox" class="book-grid">
+  <section class="panel"><h2>Rincian transaksi</h2><dl class="pay-list" id="payInfo"></dl></section>
+  <section class="panel"><h2>Metode pembayaran</h2>
+    <div class="sim-banner">Mode simulasi: tampilan menyerupai alur Midtrans Sandbox, tetapi ini bukan transaksi Midtrans sungguhan dan tidak memakai uang.</div>
+    <div id="payAction"><div id="methods"></div><button class="btn" id="btnPay" style="width:100%;margin-top:14px">Bayar Sekarang</button></div>
+  </section>
+</div>
+<div class="modal" id="sim" role="dialog" aria-modal="true" aria-labelledby="simTitle">
+  <div class="modal-box" style="max-width:440px"><button class="modal-close" aria-label="Tutup">&times;</button>
+    <h2 id="simTitle">Simulator pembayaran</h2>
+    <p style="color:#6b5d54">Pilih hasil yang ingin Anda uji, seperti pada simulator Midtrans Sandbox.</p>
+    <div class="sim-opt">
+      <button class="btn btn-ok" data-result="berhasil">Simulasikan: Berhasil</button>
+      <button class="btn btn-warn" data-result="pending">Simulasikan: Pending</button>
+      <button class="btn btn-bad" data-result="gagal">Simulasikan: Gagal</button>
+      <button class="btn btn-mute" data-result="kedaluwarsa">Simulasikan: Kedaluwarsa</button>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="../js/storage.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/payment.js"></script>
+</body>
+</html>
